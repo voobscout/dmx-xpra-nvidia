@@ -1,0 +1,12 @@
+[Unit]
+Description=Xorg for XPRA
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/Xorg -ac +iglx -retro -nocursor -v -s 0 -dpms
+Restart=always
+RestartSec=5
+
+[Install]
+Alias=xorg.service
